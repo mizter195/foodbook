@@ -9,6 +9,7 @@ exports.sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig
         timestamps: true
     },
     host: dbConfig.host,
+	port: dbConfig.port,
     dialect: dbConfig.dialect/*'mssql'|'sqlite'|'postgres'|'mssql'*/,
     pool: {
         max: 5,

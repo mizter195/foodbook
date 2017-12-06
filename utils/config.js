@@ -1,9 +1,10 @@
 exports.secret = "secret";
 
 exports.configDb = {
-    database: 'foodbook',
-    username: 'root',
-    password: '',
+    database: 'sql12209098',
+    username: 'sql12209098',
+    password: 'dEQz7Z1h17',
+	port: 3306,
     dialect: 'mysql',
-    host: '127.0.0.1'
+    host: 'sql12.freemysqlhosting.net'
 };
