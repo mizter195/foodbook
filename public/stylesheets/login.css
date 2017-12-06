@@ -1,0 +1,64 @@
+
+.btn {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: 'north-land', sans-serif
+}
+/* The Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1040; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* disable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 40px 70px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+/* The Close Button */
+.modal2 .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal2 .close:hover,
+.modal2 .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 992px) {
+    .modal-content2{
+        width: 80%;
+    }
+}
+.modal2 .error{
+    color:red;
+    font-style: italic;
+}
+.modal2 .remember{
+    margin-top: 16px;
+
+}
+.modal2 .form-pass{
+    margin-bottom: 40px;
+}

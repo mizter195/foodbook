@@ -1,0 +1,112 @@
+/*!
+ * Start Bootstrap - Clean Blog v4.0.0-beta (https://startbootstrap.com/template-overviews/clean-blog)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
+ */
+body {
+    font-size: 20px;
+    color: #333;
+    font-family: 'north-land', sans-serif;
+    /*background-image: url("/images/register.jpg");*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover ;*/
+    background: url("/images/home.jpg");
+}
+
+p {
+    line-height: 1.5;
+    margin: 30px 0
+}
+
+p a {
+    text-decoration: underline
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+a {
+    color: #333;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s
+}
+
+a:focus, a:hover {
+    color: #0085a1
+}
+
+a img:focus, a img:hover {
+    cursor: zoom-in
+}
+
+blockquote {
+    font-style: italic;
+    color: #777
+}
+
+.section-heading {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 60px
+}
+
+.caption {
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #0085a1;
+    text-shadow: none
+}
+
+::selection {
+    color: #fff;
+    background: #0085a1;
+    text-shadow: none
+}
+
+img::selection {
+    color: #fff;
+    background: 0 0
+}
+
+img::-moz-selection {
+    color: #fff;
+    background: 0 0
+}
+
+body {
+    -webkit-tap-highlight-color: #0085a1
+}
+.contain-home{
+    min-height: 10vh;
+}
+.contain-register{
+    padding-top: 100px;
+        /*min-height: 80vh;*/
+}
+.reg-body{
+    margin-top:60px;
+}
+
+.reg-body .reg-body-in {
+background-color: white;
+    padding:30px 60px;
+    border-radius: 10px ;
+}
+.contain-register .error-re,.contain-register .error-lo{
+    color: red;
+    font-style: italic;
+}

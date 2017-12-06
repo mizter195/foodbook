@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Delete Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel='stylesheet' href='/stylesheets/login.css'/>-->
+    <link rel="icon" href="/images/foodbook_logo_400x400-150x150.jpg" sizes="32x32">
+    <!-- Bootstrap CSS-->
+    <link href="/Bootstrap/css/bootstrap4.css" rel="stylesheet">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="/stylesheets/fontastic.css">
+    <!-- Font Awesome CSS-->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/stylesheets/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="/stylesheets/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/images/favicon.png">
+
+
+</head>
+<body>
+<div class="page home-page">
+    <!-- Main Navbar-->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Search Box-->
+            <div class="search-box">
+                <button class="dismiss"><i class="icon-close"></i></button>
+                <form id="searchForm" action="#" role="search">
+                    <input type="search" placeholder="What are you looking for..." class="form-control">
+                </form>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand --><a href="/views/admin" class="navbar-brand">
+                            <div class="brand-text brand-big"><span>FoodBook </span><strong>Dashboard</strong></div>
+                            <div class="brand-text brand-small"><strong>FD</strong></div></a>
+                        <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                    </div>
+                    <!-- Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Logout    -->
+                        <li class="nav-item"><a id="logoutBtn" href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+            <!-- Sidebar Header-->
+            <div class="sidebar-header d-flex align-items-center">
+                <div class="avatar"><img src="/images/admin.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                <div class="title">
+                    <h1 class="h4"><%=cookie.user.name%></h1>
+                    <p><%=cookie.user.email%></p>
+                </div>
+            </div>
+            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+            <ul class="list-unstyled">
+                <li> <a href="/views/admin"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>Dropdown </a>
+                    <ul id="dashvariants" class="collapse list-unstyled">
+                        <li><a href="#">Page Login</a></li>
+                        <li><a href="#">Page Register</a></li>
+                        <li><a href="#">Page Post Review</a></li>
+                        <li><a href="#">Page Profile</a></li>
+                        <li><a href="#">Page All Review</a></li>
+                    </ul>
+                </li>
+                <li> <a href="/views/acc"> <i class="fa fa-users" aria-hidden="true"></i>Account </a></li>
+                <li> <a href="/views/approve"> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Approve Review </a></li>
+                <li> <a href="/views/deleteReview"> <i class="fa fa-trash" aria-hidden="true"></i>Delete Review</a></li>
+            </ul>
+
+        </nav>
+        <div class="content-inner">
+            <!-- Page Header-->
+            <header class="page-header">
+                <div class="container-fluid">
+                    <h2 class="no-margin-bottom">Dashboard</h2>
+                </div>
+            </header>
+            <div class="approve">
+                <label style="font-weight: 700;font-size: 20px">All review</label>
+                <table class="table table-dark table-hover">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Address</th>
+                        <th>Content</th>
+                        <th>Rate</th>
+                        <th>User_id</th>
+                        <th>CreateAt</th>
+                        <th>UpdateAt</th>
+                        <th>Delete</th>
+                        <th>Comment</th>
+                    </tr>
+                    </thead>
+                    <tbody id="allReview">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Javascript files-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/javascript/admin/popper.min.js"> </script>
+<script src="/javascript/home/bootstrap.min.js"></script>
+<script src="/javascript/admin/jquery.validate.min.js"></script>
+<script src="/javascript/admin/front.js"></script>
+<script src="/javascript/home/logout.js"></script>
+<script src="/javascript/admin/deleteReview.js"></script>
+</body>
+</html>

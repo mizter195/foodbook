@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Post Review</title>
+    <!--<link rel='stylesheet' href='/stylesheets/login.css'/>-->
+    <link rel="icon" href="/images/foodbook_logo_400x400-150x150.jpg" sizes="32x32">
+    <!-- Bootstrap core CSS -->
+    <link href="/Bootstrap/css/bootstrap4.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/menu.css" rel="stylesheet">
+    <link href="/stylesheets/login.css" rel="stylesheet">
+    <link href="/stylesheets/footer.css" rel="stylesheet">
+    <link href="/stylesheets/postReview.css" rel="stylesheet">
+
+    <link href="/stylesheets/bootstrap-select.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Login Modal-->
+<% include login %>
+<!-- Navigation -->
+
+<% include menu %>
+//content
+<div class="container" style="padding-top: 100px;">
+
+
+    <div class="postReview">
+        <h1 style="text-align: center;font-family: 'north-land', sans-serif;font-weight: 800">POST REVIEW</h1>
+        <!--upload galery-->
+        <label>Gallery images</label>
+        <form action="/files/upload-review" method="post" enctype="multipart/form-data" id="form-gallery">
+
+
+
+            <input type="file" class="form-control" id="images" name="review" onchange="preview_images();"
+                   multiple/>
+
+            <div class="row" id="image_preview"></div>
+            <input type="submit" class="form-control btn btn-gallery"
+                   style="font-family: 'north-land', sans-serif" name='submit_image'
+                   value="Upload Multiple Image"/>
+
+        </form>
+        <form role="form" id="form-review" method="post">
+            <label>Title</label>
+            <input type="text" placeholder="Your review name" class="form-control" name="title">
+            <label>Address</label>
+            <input type="text" placeholder="Your address" class="form-control" name="address">
+            <label>Categories</label>
+            <select id="first-disabled2" class="selectpicker form-control" multiple="multiple" >
+            </select>
+            <input type="text" name="categories" hidden="hidden" id="cate-tempt">
+            <label>Content</label>
+            <textarea placeholder="Your discription" name="content"></textarea>
+            <label>Rate</label>
+            <div class="star-rating">
+                <span class="fa fa-heart" data-rating="1"></span>
+                <span class="fa fa-heart" data-rating="2"></span>
+                <span class="fa fa-heart-o" data-rating="3"></span>
+                <span class="fa fa-heart-o" data-rating="4"></span>
+                <span class="fa fa-heart-o" data-rating="5"></span>
+                <input type="hidden" name="rate" class="rating-value" value="2" id="rating-comment">
+            </div>
+
+            <input type="submit" class="form-control btn btn-login" style="font-family: 'north-land', sans-serif"
+                   value="POST REVIEW">
+            <p class="error-re"></p>
+        </form>
+        <input type="text" id="img-input" hidden="hidden" value="">
+
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<% include footer %>
+<!-- Bootstrap core JavaScript -->
+<script src="/javascript/home/jquery.min.js"></script>
+<script src="/javascript/home/popper.js"></script>
+<script src="/javascript/home/bootstrap.min.js"></script>
+<script src="/javascript/home/logout.js"></script>
+<script src="/javascript/home/postReview.js"></script>
+<script src="/javascript/bootstrap-select.js"></script>
+<script type="text/javascript" src="http://www.expertphp.in/js/jquery.form.js"></script>
+<script>
+    function preview_images() {
+        $('#form-gallery').prepend(`<input type="file" class="form-control" name="review" onchange="preview_images();"
+                       multiple/>`);
+        var total_file = 1;
+        for (var i = 0; i < total_file; i++) {
+            $('#image_preview').append("<div class='col-md-3'><img class='img-responsive' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");
+        }
+    }
+</script>
+</body>
+
+</html>

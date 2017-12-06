@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+    <!--<link rel='stylesheet' href='/stylesheets/login.css'/>-->
+    <link rel="icon" href="/images/foodbook_logo_400x400-150x150.jpg" sizes="32x32">
+    <!-- Bootstrap core CSS -->
+    <link href="/Bootstrap/css/bootstrap4.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/menu.css" rel="stylesheet">
+    <link href="/stylesheets/login.css" rel="stylesheet">
+    <link href="/stylesheets/footer.css" rel="stylesheet">
+    <link href="/stylesheets/home.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Login Modal-->
+<%include login%>
+<!-- LoginAmin Modal-->
+<%include loginAdmin%>
+<!-- Navigation -->
+
+<% include menu%>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('/images/home.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h2>Find the best place right !</h2>
+                    <span class="subheading">Find a place to stay,eat, drink from local experts. </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Footer -->
+<% include footer%>
+<!-- Bootstrap core JavaScript -->
+<script src="/javascript/home/jquery.min.js"></script>
+<script src="/javascript/home/bootstrap.min.js"></script>
+<script src="/javascript/home/login.js"></script>
+<script src="/javascript/home/logout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>All Reviews</title>
+    <!--<link rel='stylesheet' href='/stylesheets/login.css'/>-->
+    <link rel="icon" href="/images/foodbook_logo_400x400-150x150.jpg" sizes="32x32">
+    <!-- Bootstrap core CSS -->
+    <link href="/Bootstrap/css/bootstrap4.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/stylesheets/menu.css" rel="stylesheet">
+    <link href="/stylesheets/login.css" rel="stylesheet">
+    <link href="/stylesheets/allReviews.css" rel="stylesheet">
+    <link href="/stylesheets/footer.css" rel="stylesheet">
+
+
+
+</head>
+
+<body >
+<!-- Login Modal-->
+<% include login %>
+<!-- LoginAmin Modal-->
+<%include loginAdmin%>
+<!-- Navigation -->
+
+<% include menu %>
+<section id="blog-section" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row" id="allReviews">
+                </div>
+            </div>
+
+            <!--           // RECENT POST===========-->
+            <div class="col-lg-4">
+                <!--=====================
+                    NEWSLATTER
+             ======================-->
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar"> SEARCH</h2>
+                    <p>Help you to search some place without exactly name of that place !.</p>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        <input id="title" type="text" class="form-control" name="title" placeholder="Search">
+                    </div>
+                    <button type="button" class="btn btn-warning" style="width: 100%" id="searchReviewsTitle">Search</button>
+                </div>
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar"> SUGGESTION</h2>
+                    <div class="content-widget-sidebar">
+                        <ul id="recent-post">
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar" > CATEGORY</h2>
+                    <div id="category">
+                    </div>
+                    <hr>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<% include footer %>
+<!-- Bootstrap core JavaScript -->
+<script src="/javascript/home/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="/javascript/home/bootstrap.min.js"></script>
+
+<script src="/javascript/home/login.js"></script>
+<script src="/javascript/home/logout.js"></script>
+<script src="/javascript/allReviews.js"></script>
+
+
+</body>
+
+</html>

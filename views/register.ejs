@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Register</title>
+    <link href="/Bootstrap/css/bootstrap4.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/menu.css">
+    <link rel='stylesheet' href='/stylesheets/login.css'/>
+    <link rel='stylesheet' href='/stylesheets/register.css'/>
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+
+    <link rel="icon" href="/images/foodbook_logo_400x400-150x150.jpg" sizes="32x32">
+
+</head>
+<body>
+<!-- Login Modal-->
+<% include login %>
+<!-- LoginAmin Modal-->
+<%include loginAdmin%>
+<% include menu %>
+
+<div class="container contain-register">
+    <h1 style="text-align: center;color: white;font-family: 'north-land', sans-serif;">Have an account ?</h1>
+    <div class="reg-body">
+        <p style="margin: 50px 0 0;color: white;font-family: 'north-land', sans-serif;font-size: 30px">Register</p>
+        <div class="reg-body-in">
+            <form method="post"  id="submit-upload">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="label-avatar">Avatar</label>
+                            <input type="file" class="form-control"  name="avatar" placeholder="Sex"
+                                   value="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="avatar-update" type="submit"
+                               class="form-control btn btn-login" value="Upload"
+                               style="background-color: #2aabd2;border-radius:6px; color:white;cursor:pointer;margin-top: 30px">
+                    </div>
+                </div>
+            </form>
+            <form role="form" id="form-register" method="post">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email*</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password*</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                   placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                   placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Sex</label>
+                            <select class="form-control" name="sex" id="sex">
+                                <option value="1">Nam</option>
+                                <option value="0">Nữ</option>
+                            </select>
+                            <!--<input type="number" class="form-control" id="sex" name="sex" placeholder="Sex">-->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Age</label>
+                            <input type="number" class="form-control" id="age" name="age" placeholder="Age">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                            <input type="text" id="ava-input" class="form-control"  name="avatar" placeholder="avatar" hidden="hidden" value="user.jpg">
+                    <div class="col-md-12">
+                        <!--<button type="submit" class="btn btn-default"-->
+                        <!--style="    background-color: #CD5C5C; border-radius: 6px; color: white;cursor: pointer;">Register-->
+                        <!--</button>-->
+                        <input type="submit"
+                               class="form-control btn btn-login" value="Register"
+                               style="background-color: #CD5C5C;border-radius:6px; color:white;cursor:pointer;margin-top: 30px">
+                    </div>
+                </div>
+                <p class="error-re"></p>
+            </form>
+        </div>
+        <!--<div class="reg-body-in">-->
+            <!--<p style="margin: 50px 0 0;font-family: monospace;font-size: 30px">Login</p>-->
+            <!--<form id="login-form2" action="" method="post">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="exampleInputPassword1">Username</label>-->
+                    <!--<input type="text" class="form-control" id="username" name="username" placeholder="Username">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="exampleInputPassword1">Password</label>-->
+                    <!--<input type="password" class="form-control" id="password" name="password" placeholder="Password">-->
+                <!--</div>-->
+                <!--<p class="error-lo" ></p>-->
+                <!--<div class="row" style="padding-top: 20px">-->
+                    <!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+                        <!--<div class="form-group text-center remember" style="position: relative;">-->
+                            <!--<input type="checkbox" tabindex="3" class="" name="remember" id="remember"-->
+                                   <!--style="height: 25px;width: 25px;position: absolute;left: 0;margin-top: 16px;">-->
+                        <!--</div>-->
+                        <!--<label style="margin-left: 30px;">-->
+                            <!--Remember me-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+                        <!--<div class="form-group ">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-xs-12 col-sm-12 col-md-12">-->
+                                    <!--<input type="submit" name="login-submit" id="login-submit"-->
+                                           <!--tabindex="4"-->
+                                           <!--class="form-control btn btn-login" value="Log in"-->
+                                           <!--style="background-color: #CD5C5C;border-radius:6px; color:white;cursor:pointer;">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-12 col-sm-12 col-md-12">-->
+                        <!--<div class="text-center">-->
+                            <!--<a href="#" tabindex="5"-->
+                               <!--class="forgot-password">Forgot Password?</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</form>-->
+
+        <!--</div>-->
+
+
+    </div>
+</div>
+<% include footer %>
+<script src="/javascript/home/jquery.min.js"></script>
+<script src="/javascript/home/bootstrap.min.js"></script>
+<script src="/javascript/home/login.js"></script>
+<script src="/javascript/register.js"></script>
+</body>
+</html>

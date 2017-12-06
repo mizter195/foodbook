@@ -1,0 +1,29 @@
+/* your styles go here */
+.bgr{
+    height: 800px;
+    /*background-image: url(/images/home.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    color: white;
+    text-align: center;
+    background-color: #9d9d9d;
+}
+.site-heading{
+    margin: 50% 0;
+}
+.approve{
+    padding: 50px 30px;
+    min-height: 800px;
+    overflow: auto;
+    background-image: url("/images/adminPage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+.table-dark{
+    background-color:  #9cc3dc;;
+}
+label{
+    color: white;
+}
